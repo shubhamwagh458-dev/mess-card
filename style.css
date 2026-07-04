@@ -1,0 +1,446 @@
+/* =====================================================
+   CSS VARIABLES
+===================================================== */
+:root {
+  --color-bg-page: #eceef1;
+  --color-white: #ffffff;
+  --color-header-bg: #ffffff;
+  --color-nav-bg: #4b5563;
+  --color-nav-bg-dark: #414a56;
+  --color-nav-active: #5b6b85;
+  --color-nav-text: #e9ebee;
+  --color-text-dark: #2b2f38;
+  --color-text-muted: #9aa0aa;
+  --color-text-label: #5b6472;
+  --color-text-value: #23262e;
+  --color-red-accent: #e02424;
+  --color-blue-icon: #2f6fb0;
+  --color-card-header-start: #26314a;
+  --color-card-header-end: #313e5c;
+  --color-border-light: #e3e5e9;
+  --color-clock-green: #12a150;
+  --color-shadow: rgba(0, 0, 0, 0.12);
+  --font-primary: 'Poppins', 'Inter', Arial, sans-serif;
+  --font-secondary: 'Inter', Arial, sans-serif;
+
+  /* ---- Crest logo colors (edit these to re-theme the logo) ---- */
+  --logo-gold-light: #f3d581;
+  --logo-gold: #cf9f3f;
+  --logo-gold-dark: #a97b23;
+  --logo-face: #ffffff;
+  --logo-lion: #8a3b2e;
+  --logo-shield: #1f3a63;
+  --logo-red: #c81f1f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--color-bg-page);
+  color: var(--color-text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =====================================================
+   HEADER
+===================================================== */
+.site-header {
+  background-color: var(--color-header-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 40px;
+  min-width: 90px;
+  border-bottom: 1px solid var(--color-border-light);
+  height: 96px;
+  padding: 0 48px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-img {
+  height: 900px;
+  width: 130px;          /* 400:300 (4:3) aspect ratio, same as source file */
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* The uploaded logo file already contains the "Parul University" wordmark,
+   so the separately-coded text is hidden to avoid duplication. */
+.logo-text {
+  display: none;
+}
+.profile-img-top{
+  width: 50px;
+  height: 50px;
+}
+.profile-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-parul {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 30px;
+  color: #1a1a1a;
+  letter-spacing: 0.5px;
+}
+
+.logo-parul sup {
+  font-size: 12px;
+  top: -1.2em;
+}
+
+.logo-university {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 26px;
+  color: #e2231a;
+  margin-top: 2px;
+}
+
+.profile-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.profile-greeting {
+  font-size: 15px;
+  font-style: italic;
+  color: #2b6f6b;
+}
+
+.profile-greeting strong {
+  font-style: normal;
+  font-weight: 700;
+  color: #1f7a72;
+}
+
+.profile-img-top {
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f0f0f0;
+}
+
+.profile-img-top.img-fallback {
+  background: #cfd3d8;
+}
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+.main-nav {
+  background-color: var(--color-nav-bg);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: stretch;
+}
+
+.main-nav li {
+  position: relative;
+}
+
+.main-nav a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-nav-text);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 14px 22px;
+  white-space: nowrap;
+  font-family: var(--font-secondary);
+}
+
+.main-nav li:hover a {
+  background-color: var(--color-nav-bg-dark);
+}
+
+.main-nav li.active a {
+  background-color: var(--color-nav-active);
+}
+
+.main-nav .caret {
+  font-size: 11px;
+  margin-left: 2px;
+}
+
+/* =====================================================
+   PAGE HEADING
+===================================================== */
+.page-heading {
+  background-color: var(--color-white);
+  padding: 22px 40px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.page-heading h1 {
+  font-family: var(--font-primary);
+  font-weight: 500;
+  font-size: 26px;
+  color: #3b3f45;
+}
+
+.page-heading h1 span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #a7acb3;
+  margin-left: 10px;
+  letter-spacing: 0.3px;
+}
+
+/* =====================================================
+   MAIN CONTENT / CARD
+===================================================== */
+.content-area {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  min-height: 620px;
+}
+
+.mess-card {
+  width: 750px;
+  max-width: 100%;
+  height: fit-content;
+  background-color: var(--color-white);
+  border-radius: 6px;
+  box-shadow: 0 10px 30px var(--color-shadow);
+  overflow: hidden;
+}
+
+.mess-card-header {
+  background: linear-gradient(135deg, var(--color-card-header-start), var(--color-card-header-end));
+  color: #ffffff;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-primary);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.mess-card-header i {
+  font-size: 20px;
+}
+
+.mess-card-body {
+  display: flex;
+  gap: 32px;
+  padding: 34px 40px;
+}
+
+.student-photo img {
+  width: 148px;
+  height: 176px;
+  object-fit: cover;
+  border-radius: 4px;
+  background-color: #d9d9d9;
+  border: 1px solid #e5e5e5;
+}
+
+.student-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.student-details h2 {
+  font-family: var(--font-primary);
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  margin-bottom: 16px;
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: 26px 140px 1fr;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 15px;
+}
+
+.detail-icon {
+  color: var(--color-blue-icon);
+  font-size: 14px;
+}
+
+.detail-label {
+  color: var(--color-text-label);
+  font-weight: 600;
+}
+
+.detail-value {
+  color: var(--color-text-value);
+  font-weight: 500;
+}
+
+.validity-value {
+  color: var(--color-red-accent);
+  font-weight: 600;
+}
+
+/* =====================================================
+   FOOTER / TICKET DIVIDER / CLOCK
+===================================================== */
+.mess-card-footer {
+  padding: 0 40px 30px;
+  text-align: center;
+}
+
+.ticket-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 12px;
+}
+
+.dashed-line {
+  flex: 1;
+  border-top: 1px dashed #c9ccd1;
+}
+
+.ticket-notch {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--color-bg-page);
+  border: 1px solid var(--color-border-light);
+  position: absolute;
+  top: -3px;
+}
+
+.ticket-notch.left {
+  left: -58px;
+}
+
+.ticket-notch.right {
+  right: -58px;
+}
+
+.datetime-block {
+  padding: 14px 0;
+}
+
+.live-date {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.live-time {
+  font-family: var(--font-primary);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-clock-green);
+  letter-spacing: 0.5px;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+@media (max-width: 860px) {
+  .site-header {
+    padding: 16px 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+  }
+
+  .main-nav a {
+    padding: 12px 14px;
+    font-size: 13px;
+  }
+
+  .page-heading {
+    padding: 18px 20px;
+  }
+
+  .page-heading h1 {
+    font-size: 20px;
+  }
+
+  .page-heading h1 span {
+    display: block;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+
+  .content-area {
+    padding: 30px 14px;
+  }
+
+  .mess-card-body {
+    flex-direction: column;
+    align-items: center;
+    padding: 26px;
+    text-align: center;
+  }
+
+  .detail-row {
+    grid-template-columns: 22px 120px 1fr;
+    justify-items: start;
+    text-align: left;
+  }
+
+  .ticket-notch.left,
+  .ticket-notch.right {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-parul {
+    font-size: 22px;
+  }
+
+  .logo-university {
+    font-size: 18px;
+  }
+
+  .profile-greeting {
+    font-size: 12px;
+  }
+
+  .mess-card-header {
+    font-size: 17px;
+    padding: 16px 20px;
+  }
+
+  .live-time {
+    font-size: 22px;
+  }
+}
