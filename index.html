@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hostel &amp; Aarogya Card - Parul University</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="logo-area">
+    <img src="https://www.eurashe.eu/wp-content/uploads/2023/10/Parul-University-logo.jpg" alt="Parul University Logo" class="logo-img" id="universityLogo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="logo-fallback" style="display:none;">PU</div>
+    <div class="logo-text">
+  
+    </div>
+  </div>
+
+  <div class="profile-area">
+    <span class="profile-greeting">Hi, <strong id="topProfileName">SHUBHAM SANJAY WAGH</strong></span>
+    <img src="FINEL IMAGE.jpeg" alt="Profile Photo" class="profile-img-top" id="topProfilePhotoImg" onerror="this.src='';this.classList.add('img-fallback');">
+  </div>
+</header>
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="main-nav">
+  <ul>
+    <li><a href="#"><i class="fa-solid fa-chart-simple"></i> Dashboard</a></li>
+    <li><a href="#"><i class="fa-regular fa-calendar"></i> Timetable <i class="fa-solid fa-caret-down caret"></i></a></li>
+    <li><a href="#"><i class="fa-regular fa-file-lines"></i> Exam <i class="fa-solid fa-caret-down caret"></i></a></li>
+    <li class="active"><a href="#"><i class="fa-solid fa-building-columns"></i> Hostel <i class="fa-solid fa-caret-down caret"></i></a></li>
+    <li><a href="#"><i class="fa-solid fa-bus"></i> Transport <i class="fa-solid fa-caret-down caret"></i></a></li>
+    <li><a href="#"><i class="fa-solid fa-receipt"></i> Fee <i class="fa-solid fa-caret-down caret"></i></a></li>
+    <li><a href="#"><i class="fa-solid fa-gear"></i> Other <i class="fa-solid fa-caret-down caret"></i></a></li>
+    <li><a href="#"><i class="fa-regular fa-comment-dots"></i> Feedback</a></li>
+  </ul>
+</nav>
+
+<!-- ============ PAGE HEADING ============ -->
+<div class="page-heading">
+  <h1>Hostel &amp; Aarogya Card <span id="pageHeadingName">SHUBHAM SANJAY WAGH</span></h1>
+</div>
+
+<!-- ============ MAIN CONTENT ============ -->
+<main class="content-area">
+  <div class="mess-card">
+
+    <div class="mess-card-header">
+      <i class="fa-solid fa-utensils"></i>
+      <span id="hostelMessName">ABRAHAM LINCOLN MESS</span>
+    </div>
+
+    <div class="mess-card-body">
+      <div class="student-photo">
+        <img src="FINEL IMAGE.jpeg" alt="Student Photo" id="studentPhotoImg" onerror="this.classList.add('img-fallback')">
+      </div>
+
+      <div class="student-details">
+        <h2 id="studentNameDisplay">SHUBHAM SANJAY WAGH</h2>
+
+        <div class="detail-row">
+          <span class="detail-icon"><i class="fa-solid fa-list-ul"></i></span>
+          <span class="detail-label">Enrollment No.</span>
+          <span class="detail-value" id="enrollmentNoDisplay">2503051050612</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-icon"><i class="fa-solid fa-building"></i></span>
+          <span class="detail-label">Hostel</span>
+          <span class="detail-value" id="hostelNameDisplay">ABRAHAM LINCOLN - A</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-icon"><i class="fa-solid fa-phone"></i></span>
+          <span class="detail-label">Contact No.</span>
+          <span class="detail-value" id="contactNoDisplay">8010626675</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          <span class="detail-label">Institute</span>
+          <span class="detail-value" id="instituteDisplay">PIT-1</span>
+        </div>
+
+        <div class="detail-row">
+          <span class="detail-icon"><i class="fa-regular fa-calendar"></i></span>
+          <span class="detail-label">Validity</span>
+          <span class="detail-value validity-value" id="validityDisplay">01-07-2026 to 30-06-2027</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mess-card-footer">
+      <div class="ticket-divider">
+        <span class="ticket-notch left"></span>
+        <span class="dashed-line"></span>
+        <span class="ticket-notch right"></span>
+      </div>
+
+      <div class="datetime-block">
+        <div class="live-date" id="liveDate">04-07-2026</div>
+        <div class="live-time" id="liveTime">11:44:38 PM</div>
+      </div>
+
+      <div class="ticket-divider">
+        <span class="dashed-line"></span>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
